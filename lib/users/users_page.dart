@@ -20,7 +20,7 @@ class UsersPage extends StatelessWidget {
             UserAvatar(
               avatarColor: users[i].color,
               username: 'user${users[i].id}',
-              onAvatarTap: () => context.router.push(
+              onAvatarTap: () => context.pushRoute(
                 UserProfileRoute(
                   userId: users[i].id,
                 ),

@@ -5,7 +5,7 @@ import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/routes/ro
 
 import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/widgets.dart';
 
-@RoutePage()  
+@RoutePage()
 class PostsPage extends StatelessWidget {
   PostsPage({Key? key}) : super(key: key);
   final posts = Post.posts;
@@ -23,7 +23,7 @@ class PostsPage extends StatelessWidget {
               PostTile(
                 tileColor: posts[i].color,
                 postTitle: posts[i].title,
-                onTileTap: () => context.router.push(
+                onTileTap: () => context.pushRoute(
                   SinglePostRoute(
                     postId: posts[i].id,
                   ),
